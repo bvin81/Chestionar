@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    
+
+    <div class="nav-menu">
+        <button id="nav-quiz" class="nav-btn active" onclick="switchView('quiz')">Quiz</button>
+        <button id="nav-stats" class="nav-btn" onclick="switchView('stats')">Răspunsuri greșite</button>
+        <button class="nav-btn nav-btn-reset" onclick="resetPool()">Resetează</button>
+    </div>
+
+    <div id="quiz-view" class="view-section">
+        <div class="card" id="quiz-card">
+            <div id="question" class="question"></div>
+            <div id="answers" class="answers"></div>
+        </div>
+
+        <div class="progress-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-box">
+                <span class="stat-label">Corecte</span>
+                <span id="correct" class="stat-value">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Greșite</span>
+                <span id="wrong" class="stat-value">0</span>
+            </div>
+            <div class="stat-box">
+                <span class="stat-label">Pool</span>
+                <span id="pool-count" class="stat-value">–</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="stats-view" class="view-section hidden">
+        <div class="card table-card">
+            <h2>Răspunsuri greșite</h2>
+            <div class="table-responsive">
+                <table id="wrong-answers-table">
+                    <thead>
+                        <tr>
+                            <th>Întrebare</th>
+                            <th>Răspuns corect</th>
+                            <th>Răspunsul tău</th>
+                        </tr>
+                    </thead>
+                    <tbody id="wrong-answers-body">
+                        <tr>
+                            <td colspan="3" style="text-align: center; color: #666;">Nu ai niciun răspuns greșit. Continuă așa! 🤹</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="app.js"></script>
+
+<footer class="promo-footer">
+    Aplicație realizată de <strong>Biró Vince</strong> &nbsp;·&nbsp; Dezvoltare web &amp; soluții digitale
+    &nbsp;·&nbsp; <a href="tel:0748545706">0748 545 706</a>
+    &nbsp;·&nbsp; <a href="mailto:biro.vince13@gmail.com">biro.vince13@gmail.com</a>
+</footer>
+
+</body>
+</html>
